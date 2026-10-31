@@ -1,0 +1,33 @@
+{
+  "name": "priyadharshini-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "predev": "node scripts/generate-certificate-previews.mjs",
+    "prebuild": "node scripts/generate-certificate-previews.mjs",
+    "build": "next build",
+    "start": "next start",
+    "test:project-media": "node --test tests/project-media.test.mjs",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@animate-ui/react": "^2.4.1",
+    "@napi-rs/canvas": "1.1.0",
+    "motion": "^14.9.0",
+    "next": "latest",
+    "pdfjs-dist": "6.4.299",
+    "radix-ui": "^1.8.1",
+    "react": "latest",
+    "react-dom": "latest"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "latest",
+    "@types/node": "latest",
+    "@types/react": "latest",
+    "@types/react-dom": "latest",
+    "postcss": "latest",
+    "tailwindcss": "latest",
+    "typescript": "latest"
+  }
+}

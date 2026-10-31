@@ -1,0 +1,20 @@
+{
+  "smartBlindStick": {
+    "src": "/projects/smart-blind-stick.png",
+    "alt": "Photo of the smart blind stick prototype with an ultrasonic sensor, Arduino board, and battery attached to the white cane.",
+    "width": 1280,
+    "height": 720
+  },
+  "rcAmplifier": {
+    "src": "/projects/rc-coupled-amplifier.png",
+    "alt": "Schematic of a single-stage RC-coupled common-emitter amplifier with a BC547 transistor, bias resistors, coupling capacitors, and emitter bypass capacitor.",
+    "width": 680,
+    "height": 500
+  },
+  "hartleyOscillator": {
+    "src": "/projects/hartley-oscillator.png",
+    "alt": "Hartley oscillator circuit schematic with a transistor, split inductor tank, capacitors, bias resistors, and output waveform.",
+    "width": 550,
+    "height": 550
+  }
+}

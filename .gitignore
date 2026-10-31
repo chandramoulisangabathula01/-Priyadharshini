@@ -1,0 +1,16 @@
+.next/
+out/
+node_modules/
+*.tsbuildinfo
+.DS_Store
+.env
+.env.*
+!.env.example
+output/
+tmp/
+public/certificate-previews/
+.vercel/
+coverage/
+
+# Local Netlify folder
+.netlify
