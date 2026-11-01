@@ -82,3 +82,20 @@ export function getCertificateFiles(): CertificateFile[] {
     })
     .sort((a, b) => a.title.localeCompare(b.title));
 }
+
+export function getSemesterCertificateFiles(): CertificateFile[] {
+  return [
+    {
+      title: "First Year · Semester I",
+      detail: "SR University · Certificate of Appreciation · 2025–26",
+      src: `/sem%20certificate/${encodeURIComponent("sem 1.jpeg")}`,
+      kind: "image",
+    },
+    {
+      title: "First Year · Semester II",
+      detail: "SR University · Certificate of Appreciation · 2025–26",
+      src: `/sem%20certificate/${encodeURIComponent("sem 2.jpeg")}`,
+      kind: "image",
+    },
+  ];
+}

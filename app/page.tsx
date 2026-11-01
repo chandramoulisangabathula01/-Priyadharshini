@@ -4,7 +4,7 @@ import { CertificateGallery } from "@/components/portfolio/certificate-gallery";
 import { ProjectGallery } from "@/components/portfolio/project-gallery";
 import { Effect, Effects } from "@animate-ui/react/primitives/effects/effect";
 import { projects } from "@/content/projects";
-import { getCertificateFiles } from "@/lib/certificates";
+import { getCertificateFiles, getSemesterCertificateFiles } from "@/lib/certificates";
 
 const skillGroups = [
   { label: "Code", icon: "{ }", skills: ["Python", "Web development"] },
@@ -22,6 +22,7 @@ const interests = [
 
 export default function Home() {
   const certificates = getCertificateFiles();
+  const semesterCertificates = getSemesterCertificateFiles();
 
   return (
     <>
@@ -142,10 +143,28 @@ export default function Home() {
         </Effect>
 
         <Effect className="section-reveal" fade slide={{ direction: "up", offset: 24 }} inView>
+        <section className="semester-honours-section" id="semester-certificates">
+          <div className="section-wrap">
+            <div className="section-head certificate-head">
+              <div><div className="section-label"><span className="section-index">06 /</span> ACADEMIC HONOURS</div><h2>Hard work, <em>recognised.</em></h2></div>
+              <p className="section-kicker">Department appreciation<br />for academic excellence.</p>
+            </div>
+            <div className="semester-honours-intro">
+              <span className="semester-honours-mark" aria-hidden="true">✦</span>
+              <p>Recognised by the Head of the ECE Department at SR University for academic excellence in both semesters of my first year.</p>
+              <span className="mono semester-honours-year">2025–26</span>
+            </div>
+            <div className="certificate-shelf-heading"><span>FIRST YEAR · ELECTRONICS &amp; COMMUNICATION ENGINEERING</span><span className="mono">2 APPRECIATION CERTIFICATES</span></div>
+            <CertificateGallery files={semesterCertificates} variant="semester" />
+          </div>
+        </section>
+        </Effect>
+
+        <Effect className="section-reveal" fade slide={{ direction: "up", offset: 24 }} inView>
         <section className="certificate-section" id="certificates">
           <div className="section-wrap">
             <div className="section-head certificate-head">
-              <div><div className="section-label"><span className="section-index">06 /</span> SELECTED CERTIFICATIONS</div><h2>Proof of the <em>practice.</em></h2></div>
+              <div><div className="section-label"><span className="section-index">07 /</span> SELECTED CERTIFICATIONS</div><h2>Proof of the <em>practice.</em></h2></div>
               <p className="section-kicker">Little milestones from<br />a life of learning.</p>
             </div>
             <div className="certificate-summary">
@@ -170,7 +189,7 @@ export default function Home() {
           <div className="dream-stars" aria-hidden="true" />
           <div className="section-wrap dream-grid">
             <div className="dream-copy">
-              <div className="section-label section-label-light"><span className="section-index">07 /</span> THE NORTH STAR</div>
+              <div className="section-label section-label-light"><span className="section-index">08 /</span> THE NORTH STAR</div>
               <span className="mono dream-overline">A DREAM THAT REACHES BEYOND THE HORIZON</span>
               <h2>One day,<br />I hope to work <em>among the stars.</em></h2>
               <p>My dream is to become an ISRO professional and contribute to India&apos;s space exploration. I&apos;m especially interested in the ways electronics and communication engineering help missions reach farther.</p>
@@ -193,7 +212,7 @@ export default function Home() {
         <Effect className="section-reveal" fade slide={{ direction: "up", offset: 24 }} inView>
         <section className="interests-section section-wrap" id="interests">
           <div className="section-head interests-head">
-            <div><div className="section-label"><span className="section-index">08 /</span> OUTSIDE THE CIRCUIT</div><h2>A few things that<br /><em>make me, me.</em></h2></div>
+            <div><div className="section-label"><span className="section-index">09 /</span> OUTSIDE THE CIRCUIT</div><h2>A few things that<br /><em>make me, me.</em></h2></div>
             <p className="section-kicker">A curious mind doesn&apos;t<br />clock out after class.</p>
           </div>
           <div className="interests-grid">
@@ -208,7 +227,7 @@ export default function Home() {
         <section className="contact-section" id="contact">
           <div className="section-wrap contact-grid">
             <div className="contact-copy">
-              <div className="section-label"><span className="section-index">09 /</span> OPEN CHANNEL</div>
+              <div className="section-label"><span className="section-index">10 /</span> OPEN CHANNEL</div>
               <h2>Have a good<br /><em>question?</em></h2>
               <p>I&apos;m open to internships, academic collaborations, and conversations about electronics, Python, and space technology.</p>
               <a className="contact-email" href="mailto:priyadharshinigundu@gmail.com">priyadharshinigundu@gmail.com <span aria-hidden="true">→</span></a>

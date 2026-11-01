@@ -253,6 +253,18 @@ button { color: inherit; }
 .certificate-open { margin-left: auto; color: var(--rust); }
 
 /* Certificate shelf */
+.semester-honours-section { padding: 88px 0 92px; background: #e9e7df; }
+.semester-honours-intro { display: flex; align-items: center; gap: 16px; padding: 18px 22px; border: 1px solid #d5d0c3; background: #f7f5ee; }
+.semester-honours-intro p { max-width: 680px; margin: 0; color: #626d6d; font-size: 12px; line-height: 1.7; }
+.semester-honours-mark { display: grid; width: 40px; height: 40px; flex: 0 0 40px; place-items: center; border: 1px solid #c88e72; border-radius: 50%; color: var(--rust); font-size: 17px; }
+.semester-honours-year { margin-left: auto; color: #8b8579; font-size: 9px; letter-spacing: .12em; }
+.semester-certificate-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.semester-certificate-gallery .certificate-link { flex-direction: column; align-items: stretch; gap: 13px; padding: 13px; }
+.semester-certificate-gallery .certificate-thumb { display: block; width: 100%; height: auto; aspect-ratio: 1.58; flex: 0 0 auto; overflow: hidden; background: #fff; }
+.semester-certificate-gallery .certificate-thumb img { display: block; width: 100%; height: 100%; object-fit: contain; transition: transform var(--motion-medium) var(--ease-out); }
+.semester-certificate-gallery .certificate-link-copy { gap: 5px; padding: 0 2px 2px; }
+.semester-certificate-gallery .certificate-link-copy strong { font-size: 17px; }
+.semester-certificate-gallery .certificate-link-copy small { font-size: 10px; }
 .certificate-section { padding: 96px 0 100px; background: #f1efe8; }
 .certificate-head { margin-bottom: 36px; }
 .certificate-summary { display: flex; align-items: center; gap: 20px; padding: 23px 26px; border: 1px solid #d6d1c4; background: #f8f6ef; }
@@ -513,6 +525,7 @@ button { color: inherit; }
   .project-footnote { align-items: flex-start; font-size: 12px; }
   .recognition-section { padding: 67px 0; }
   .certificate-section { padding: 67px 0 70px; }
+  .semester-honours-section { padding: 67px 0 70px; }
   .certificate-head { margin-bottom: 24px; }
   .certificate-summary { align-items: flex-start; gap: 12px; padding: 17px 15px; }
   .certificate-summary-mark { width: 38px; height: 38px; flex-basis: 38px; font-size: 16px; }
@@ -522,6 +535,14 @@ button { color: inherit; }
   .certificate-shelf-heading { align-items: flex-start; flex-direction: column; gap: 5px; margin-top: 25px; }
   .certificate-section .certificate-gallery { grid-template-columns: 1fr; gap: 8px; }
   .certificate-section .certificate-link { min-height: 72px; }
+  .semester-honours-intro { align-items: flex-start; gap: 11px; padding: 15px 13px; }
+  .semester-honours-mark { width: 34px; height: 34px; flex-basis: 34px; font-size: 14px; }
+  .semester-honours-intro p { font-size: 10px; }
+  .semester-honours-year { display: none; }
+  .semester-certificate-gallery { grid-template-columns: 1fr; gap: 9px; }
+  .semester-certificate-gallery .certificate-link { gap: 10px; padding: 10px; }
+  .semester-certificate-gallery .certificate-thumb { aspect-ratio: 1.6; }
+  .semester-certificate-gallery .certificate-link-copy strong { font-size: 15px; }
   .recognition-grid { grid-template-columns: 1fr; gap: 20px; }
   .recognition-copy h2 { margin-top: 19px; }
   .recognition-copy > p { font-size: 12px; }

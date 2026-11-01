@@ -11,7 +11,7 @@ export type CertificateFile = {
   previewPages?: string[];
 };
 
-export function CertificateGallery({ files }: { files: CertificateFile[] }) {
+export function CertificateGallery({ files, variant = "default" }: { files: CertificateFile[]; variant?: "default" | "semester" }) {
   const [active, setActive] = useState<CertificateFile | null>(null);
   const [imageFailed, setImageFailed] = useState(false);
   const dialogRef = useRef<HTMLElement>(null);
@@ -50,11 +50,11 @@ export function CertificateGallery({ files }: { files: CertificateFile[] }) {
 
   return (
     <>
-      <div className="certificate-gallery" aria-label="Certificates">
+      <div className={`certificate-gallery${variant === "semester" ? " semester-certificate-gallery" : ""}`} aria-label="Certificates">
         <Effects asChild fade slide={{ direction: "up", offset: 14 }} inView inViewMargin="-30px" holdDelay={45} transition={{ type: "spring", stiffness: 180, damping: 26 }}>
           {files.map((file) => (
             <button className="certificate-link" key={file.src} type="button" onClick={(event) => { triggerRef.current = event.currentTarget; setImageFailed(false); setActive(file); }}>
-            <span className="certificate-thumb" aria-hidden="true">{file.kind === "pdf" ? "PDF" : "IMG"}<span>→</span></span>
+            <span className="certificate-thumb" aria-hidden="true">{variant === "semester" && file.kind === "image" ? <img src={file.src} alt="" loading="lazy" /> : <>{file.kind === "pdf" ? "PDF" : "IMG"}<span>→</span></>}</span>
             <span className="certificate-link-copy"><strong>{file.title}</strong><small>{file.detail}</small></span>
             <span className="certificate-open" aria-hidden="true">→</span>
           </button>
